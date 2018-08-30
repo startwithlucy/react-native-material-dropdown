@@ -6,7 +6,7 @@ import {
   FlatList,
   Animated,
   Modal,
-  TouchableWithoutFeedback,
+  TouchableOpacity,
   Dimensions,
   Platform,
   ViewPropTypes,
@@ -55,8 +55,8 @@ export default class Dropdown extends PureComponent {
     rippleOpacity: 0.54,
     shadeOpacity: 0.12,
 
-    rippleDuration: 400,
-    animationDuration: 225,
+    rippleDuration: 0,
+    animationDuration: 0,
 
     fontSize: 16,
 
@@ -79,7 +79,7 @@ export default class Dropdown extends PureComponent {
   };
 
   static propTypes = {
-    ...TouchableWithoutFeedback.propTypes,
+    ...TouchableOpacity.propTypes,
 
     disabled: PropTypes.bool,
 
@@ -726,12 +726,12 @@ export default class Dropdown extends PureComponent {
 
     return (
       <View onLayout={this.onLayout} ref={this.updateContainerRef} style={containerStyle}>
-        <TouchableWithoutFeedback {...touchableProps}>
+        <TouchableOpacity {...touchableProps}>
           <View pointerEvents='box-only'>
             {this.renderBase(props)}
             {this.renderRipple()}
           </View>
-        </TouchableWithoutFeedback>
+        </TouchableOpacity>
 
         <Modal
           visible={modal}
