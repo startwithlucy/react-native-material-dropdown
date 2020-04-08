@@ -482,6 +482,7 @@ export default class Dropdown extends PureComponent {
       labelExtractor,
       dropdownOffset,
       renderAccessory = this.renderAccessory,
+      testID,
     } = this.props;
 
     let index = this.selectedIndex();
