@@ -482,7 +482,6 @@ export default class Dropdown extends PureComponent {
       labelExtractor,
       dropdownOffset,
       renderAccessory = this.renderAccessory,
-      testID,
     } = this.props;
 
     let index = this.selectedIndex();
@@ -508,7 +507,6 @@ export default class Dropdown extends PureComponent {
       <TextField
         label=''
         labelHeight={dropdownOffset.top - Platform.select({ ios: 1, android: 2 })}
-        testID={`${testID}-textField`}
         {...props}
 
         value={title}
@@ -584,6 +582,7 @@ export default class Dropdown extends PureComponent {
       rippleOpacity,
       rippleDuration,
       shadeOpacity,
+      testID,
     } = this.props;
 
     let props = propsExtractor(item, index);
@@ -630,7 +629,7 @@ export default class Dropdown extends PureComponent {
     ];
 
     return (
-      <DropdownItem index={index} {...props}>
+      <DropdownItem index={index} {...props} testID={`${testID}-dropdown-${value}`}>
         <Text style={[styles.item, itemTextStyle, textStyle]} numberOfLines={1}>
           {title}
         </Text>
