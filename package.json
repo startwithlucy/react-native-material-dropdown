@@ -43,6 +43,6 @@
     "prop-types": "^15.5.9",
     "react-native-material-buttons": "^0.5.0",
     "react-native-material-ripple": "^0.8.0",
-    "react-native-material-textfield": "https://github.com/startwithlucy/react-native-material-textfield"
+    "react-native-material-textfield": "https://github.com/startwithlucy/react-native-material-textfield#558d585bee678c9964b41765d748efb2c8029b73"
   }
 }
