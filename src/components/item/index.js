@@ -33,17 +33,17 @@ export default class DropdownItem extends PureComponent {
   }
 
   render() {
-    let { children, style, index, ...props } = this.props;
+    let { children, style, index, testID, ...props } = this.props;
 
     return (
-      <TouchableOpacity
-        {...props}
-
-        style={[styles.container, style]}
-        onPress={this.onPress}
-      >
-        {children}
-      </TouchableOpacity>
+        <TouchableOpacity
+            {...props}
+            testID={testID}
+            style={[styles.container, style]}
+            onPress={this.onPress}
+        >
+          {children}
+        </TouchableOpacity>
     );
   }
 }
